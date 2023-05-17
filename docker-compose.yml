@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  laravel:
+    image: celaraze/laravel-docker:latest
+    container_name: laravel
+    build: .
