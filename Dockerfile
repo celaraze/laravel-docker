@@ -2,7 +2,7 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND=nointeractive
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y apt-utils curl cron git nginx composer php-fpm php-dom php-zip php-curl php-bcmath php-ldap php-gd nano && \
+    apt-get install -y apt-utils curl cron git nginx composer php-fpm php-dom php-zip php-curl php-bcmath php-ldap php-gd nano php-mysql && \
     apt-get clean
 COPY laravel.conf /etc/nginx/sites-available/laravel.conf
 COPY start.sh /root/start.sh
